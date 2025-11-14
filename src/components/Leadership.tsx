@@ -1,22 +1,9 @@
-import drJoe from "@/assets/dr-joe.jpg";
-import katLeader from "@/assets/kat-leader.jpg";
 import drMarik from "@/assets/dr-marik.jpg";
 import drVaron from "@/assets/dr-varon-new.jpg";
+import drKory from "@/assets/dr-kory.jpg";
 
 const Leadership = () => {
   const founders = [
-    {
-      name: "Dr. Joe Ladapo",
-      title: "Co-Founder & Chief Medical Officer",
-      image: drJoe,
-      bio: "IMA is led by practicing physicians who refused to surrender care to corporations. They are building a model of medicine that serves patients first."
-    },
-    {
-      name: "Dr. Kat Lindley",
-      title: "Co-Founder & President",
-      image: katLeader,
-      bio: "Our mission is to restore the sacred trust between physicians and patients, one honest conversation at a time."
-    },
     {
       name: "Dr. Paul E. Marik",
       title: "Co-Founder & Chief Scientific Officer",
@@ -28,6 +15,12 @@ const Leadership = () => {
       title: "Co-Founder & Medical Director",
       image: drVaron,
       bio: "Committed to defending the patient-physician relationship and ensuring access to life-saving treatments based on clinical expertise."
+    },
+    {
+      name: "Dr. Pierre Kory",
+      title: "Co-Founder & Chief Medical Officer",
+      image: drKory,
+      bio: "IMA is led by practicing physicians who refused to surrender care to corporations. They are building a model of medicine that serves patients first."
     }
   ];
 
@@ -43,7 +36,7 @@ const Leadership = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
           {founders.map((founder, index) => (
             <div key={index} className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="aspect-square overflow-hidden">
