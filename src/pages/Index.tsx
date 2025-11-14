@@ -1,12 +1,31 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import TheStakes from "@/components/TheStakes";
+import WhatWeDo from "@/components/WhatWeDo";
+import MajorGiftImpact from "@/components/MajorGiftImpact";
+import Leadership from "@/components/Leadership";
+import WhyNow from "@/components/WhyNow";
+import GivingLevels from "@/components/GivingLevels";
+import FoundersCircle from "@/components/FoundersCircle";
+import UseOfFunds from "@/components/UseOfFunds";
+import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <TheStakes />
+      <WhatWeDo />
+      <MajorGiftImpact />
+      <Leadership />
+      <WhyNow />
+      <GivingLevels />
+      <FoundersCircle />
+      <UseOfFunds />
+      <FinalCTA />
+      <Footer />
     </div>
   );
 };
