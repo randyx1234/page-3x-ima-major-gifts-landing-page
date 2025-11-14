@@ -1,14 +1,8 @@
-import { AlertCircle } from "lucide-react";
-
 const TheStakes = () => {
   return (
     <section id="the-stakes" className="py-24 bg-gradient-to-b from-background to-section-light">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-4">
-            <AlertCircle className="w-8 h-8 text-destructive" />
-          </div>
-          
           <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
             Medicine is broken.{" "}
             <span className="text-primary">But it can be fixed.</span>
