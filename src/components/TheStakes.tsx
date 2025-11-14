@@ -1,27 +1,47 @@
+import { AlertCircle } from "lucide-react";
+
 const TheStakes = () => {
   return (
-    <section id="the-stakes" className="py-20 bg-background">
+    <section id="the-stakes" className="py-24 bg-gradient-to-b from-background to-section-light">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center space-y-6">
-          <h2 className="text-4xl font-bold text-foreground">
-            Medicine is broken. But it can be fixed.
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-destructive/10 mb-4">
+            <AlertCircle className="w-8 h-8 text-destructive" />
+          </div>
+          
+          <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
+            Medicine is broken.{" "}
+            <span className="text-primary">But it can be fixed.</span>
           </h2>
-          <div className="space-y-4 text-lg text-muted-foreground">
-            <p>
+          
+          <div className="max-w-2xl mx-auto space-y-6 text-lg text-muted-foreground">
+            <p className="text-xl">
               Modern medicine is under pressure from corporate interests, profit-driven protocols, and censorship.
             </p>
-            <ul className="space-y-3 text-left inline-block">
-              <li className="list-disc">Independent doctors have been deplatformed.</li>
-              <li className="list-disc">Research has been buried.</li>
-              <li className="list-disc">Patients have been denied informed consent.</li>
-            </ul>
-            <p>
-              Chronic illness is rising. Trust in the system is collapsing. Without independent voices, honest medicine disappears.
+            
+            <div className="grid md:grid-cols-3 gap-6 py-6">
+              <div className="p-6 bg-card rounded-lg border-l-4 border-destructive shadow-sm">
+                <p className="font-semibold text-foreground">Independent doctors have been deplatformed</p>
+              </div>
+              <div className="p-6 bg-card rounded-lg border-l-4 border-destructive shadow-sm">
+                <p className="font-semibold text-foreground">Research has been buried</p>
+              </div>
+              <div className="p-6 bg-card rounded-lg border-l-4 border-destructive shadow-sm">
+                <p className="font-semibold text-foreground">Patients have been denied informed consent</p>
+              </div>
+            </div>
+            
+            <p className="text-xl font-medium text-foreground">
+              Chronic illness is rising. Trust in the system is collapsing. <br />
+              <span className="text-destructive">Without independent voices, honest medicine disappears.</span>
             </p>
           </div>
-          <p className="text-xl font-semibold text-primary pt-8">
-            Your gift helps restore integrity, evidence, and choice to patient care.
-          </p>
+          
+          <div className="pt-8 border-t-2 border-accent/20 mt-12">
+            <p className="text-2xl font-bold text-primary">
+              Your gift helps restore integrity, evidence, and choice to patient care.
+            </p>
+          </div>
         </div>
       </div>
     </section>
