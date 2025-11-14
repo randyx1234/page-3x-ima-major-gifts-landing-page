@@ -34,14 +34,16 @@ const WhyNow = () => {
           
           {/* Video Section */}
           <div className="my-12">
-            <div className="aspect-video w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Why IMA, Why Now"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+            <div className="aspect-video w-full max-w-3xl mx-auto rounded-lg overflow-hidden bg-muted border-2 border-border flex items-center justify-center">
+              <div className="text-center space-y-4 p-8">
+                <div className="w-20 h-20 mx-auto bg-primary/20 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+                <p className="text-xl font-semibold text-foreground">Why IMA, Why Now</p>
+                <p className="text-sm text-muted-foreground">Video coming soon</p>
+              </div>
             </div>
           </div>
 
