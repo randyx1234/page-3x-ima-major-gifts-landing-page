@@ -31,6 +31,20 @@ const WhyNow = () => {
               There is a limited window to build and scale this alternative. Major donors make that possible. With your support, IMA can move from defending what is left to building what comes next.
             </p>
           </div>
+          
+          {/* Video Section */}
+          <div className="my-12">
+            <div className="aspect-video w-full max-w-3xl mx-auto rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Why IMA, Why Now"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+
           <div className="text-center">
             <Button
               size="lg"
