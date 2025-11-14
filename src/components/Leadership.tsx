@@ -1,7 +1,7 @@
 import drJoe from "@/assets/dr-joe.jpg";
 import katLeader from "@/assets/kat-leader.jpg";
 import drMarik from "@/assets/dr-marik.jpg";
-import drVaron from "@/assets/dr-varon.jpg";
+import drVaron from "@/assets/dr-varon-new.jpg";
 
 const Leadership = () => {
   const founders = [
