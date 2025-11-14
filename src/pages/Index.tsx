@@ -2,7 +2,6 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import TheStakes from "@/components/TheStakes";
 import WhatWeDo from "@/components/WhatWeDo";
-import MajorGiftImpact from "@/components/MajorGiftImpact";
 import Leadership from "@/components/Leadership";
 import WhyNow from "@/components/WhyNow";
 import GivingLevels from "@/components/GivingLevels";
@@ -18,7 +17,6 @@ const Index = () => {
       <Hero />
       <TheStakes />
       <WhatWeDo />
-      <MajorGiftImpact />
       <Leadership />
       <WhyNow />
       <GivingLevels />
