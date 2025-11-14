@@ -1,5 +1,7 @@
 import drJoe from "@/assets/dr-joe.jpg";
 import katLeader from "@/assets/kat-leader.jpg";
+import drMarik from "@/assets/dr-marik.jpg";
+import drVaron from "@/assets/dr-varon.jpg";
 
 const Leadership = () => {
   const founders = [
@@ -14,6 +16,18 @@ const Leadership = () => {
       title: "Co-Founder & President",
       image: katLeader,
       bio: "Our mission is to restore the sacred trust between physicians and patients, one honest conversation at a time."
+    },
+    {
+      name: "Dr. Paul E. Marik",
+      title: "Co-Founder & Chief Scientific Officer",
+      image: drMarik,
+      bio: "Dedicated to advancing evidence-based medicine and empowering physicians to practice with clinical autonomy and scientific integrity."
+    },
+    {
+      name: "Dr. Joseph Varon",
+      title: "Co-Founder & Medical Director",
+      image: drVaron,
+      bio: "Committed to defending the patient-physician relationship and ensuring access to life-saving treatments based on clinical expertise."
     }
   ];
 
@@ -29,7 +43,7 @@ const Leadership = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
           {founders.map((founder, index) => (
             <div key={index} className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="aspect-square overflow-hidden">
