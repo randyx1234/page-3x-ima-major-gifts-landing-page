@@ -5,22 +5,22 @@ import drKory from "@/assets/dr-kory.jpg";
 const Leadership = () => {
   const founders = [
     {
-      name: "Dr. Paul E. Marik",
-      title: "Co-Founder & Chief Scientific Officer",
+      name: "Paul E. Marik MD, FCCM, FCCP",
+      title: "Pulmonary and Critical Care Specialist",
       image: drMarik,
-      bio: "Dedicated to advancing evidence-based medicine and empowering physicians to practice with clinical autonomy and scientific integrity."
+      bio: "Chief Scientific Officer"
     },
     {
-      name: "Dr. Joseph Varon",
-      title: "Co-Founder & Medical Director",
+      name: "Joseph Varon MD, FCCM, FCCP",
+      title: "Professor of Medicine",
       image: drVaron,
-      bio: "Committed to defending the patient-physician relationship and ensuring access to life-saving treatments based on clinical expertise."
+      bio: "President and Chief Medical Officer"
     },
     {
-      name: "Dr. Pierre Kory",
-      title: "Co-Founder & Chief Medical Officer",
+      name: "Pierre Kory MD, MPA",
+      title: "Pulmonary and Critical Care Specialist",
       image: drKory,
-      bio: "IMA is led by practicing physicians who refused to surrender care to corporations. They are building a model of medicine that serves patients first."
+      bio: "President Emeritus, IMA • Founder, Leading Edge Clinic"
     }
   ];
 
