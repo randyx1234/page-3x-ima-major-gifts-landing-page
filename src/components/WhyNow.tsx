@@ -1,19 +1,18 @@
 import { Button } from "@/components/ui/button";
-
 const WhyNow = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
     }
   };
-
-  return (
-    <section id="why-ima-why-now" className="py-20 bg-background">
+  return <section id="why-ima-why-now" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
-            Why Independent Medical Alliance. Why now.
+            Why IMA. Why now.
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground mb-8">
             <p>
@@ -48,18 +47,12 @@ const WhyNow = () => {
           </div>
 
           <div className="text-center">
-            <Button
-              size="lg"
-              onClick={() => scrollToSection("giving-levels")}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-            >
+            <Button size="lg" onClick={() => scrollToSection("giving-levels")} className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
               Stand with IMA today
             </Button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default WhyNow;
