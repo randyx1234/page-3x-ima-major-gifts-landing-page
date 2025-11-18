@@ -26,8 +26,8 @@ const Hero = () => {
         backgroundPosition: 'center',
       }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-primary/55" />
+      {/* Dark overlay with gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
