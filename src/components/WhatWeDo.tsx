@@ -35,7 +35,7 @@ const WhatWeDo = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            What your support makes possible
+            What your support makes possible.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Independent Medical Alliance exists to protect patients and empower physicians who put people before profit. Major gifts directly fuel these programs.

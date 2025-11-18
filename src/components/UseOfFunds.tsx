@@ -12,7 +12,7 @@ const UseOfFunds = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-foreground mb-12">
-            Where your gift goes
+            Where your gift goes.
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-8">
             IMA is committed to transparency and stewardship. Your contribution is used to advance the mission with care and integrity.
