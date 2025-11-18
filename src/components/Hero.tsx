@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Play, CheckCircle2 } from "lucide-react";
+import { Phone, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/hero-medical.jpg";
 
 const Hero = () => {
@@ -51,9 +51,9 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("footer")}
-              className="bg-white/95 hover:bg-white text-primary border-0 font-semibold text-lg px-8 py-6 rounded-md shadow-lg"
+              className="bg-white/95 hover:bg-white text-primary hover:text-primary border-0 font-semibold text-lg px-8 py-6 rounded-md shadow-lg"
             >
-              <Play className="w-5 h-5 mr-2 fill-current" />
+              <Phone className="w-5 h-5 mr-2" />
               Schedule a Call With Our Team
             </Button>
           </div>
