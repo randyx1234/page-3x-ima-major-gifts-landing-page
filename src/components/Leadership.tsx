@@ -43,7 +43,7 @@ const Leadership = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+        <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto mb-12">
           {founders.map((founder, index) => (
             <div key={index} className="bg-card rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
               <div className="aspect-square overflow-hidden">
