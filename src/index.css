@@ -29,7 +29,7 @@ All colors MUST be HSL.
     --muted-foreground: 215 16% 47%;
 
     /* Teal accent from logo */
-    --accent: 180 45% 55%;
+    --accent: 184 100% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -43,7 +43,7 @@ All colors MUST be HSL.
     
     /* Custom IMA tokens */
     --ima-blue: 218 100% 22%;
-    --ima-teal: 180 45% 55%;
+    --ima-teal: 184 100% 32%;
     --section-light: 210 50% 98%;
 
     --sidebar-background: 0 0% 98%;
@@ -82,7 +82,7 @@ All colors MUST be HSL.
     --muted: 217 33% 17%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 180 45% 55%;
+    --accent: 184 100% 32%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
@@ -93,7 +93,7 @@ All colors MUST be HSL.
     --ring: 218 100% 45%;
     
     --ima-blue: 218 100% 45%;
-    --ima-teal: 180 45% 55%;
+    --ima-teal: 184 100% 32%;
     --section-light: 217 33% 15%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
