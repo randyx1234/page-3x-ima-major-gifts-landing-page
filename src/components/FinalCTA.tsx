@@ -9,7 +9,7 @@ const FinalCTA = () => {
   };
 
   return (
-    <section id="final-cta" className="py-20 bg-gradient-to-r from-primary via-primary/90 to-accent">
+    <section id="final-cta" className="py-20 bg-gradient-to-br from-[#03066d] to-[#03b4b5]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-primary-foreground">
