@@ -36,7 +36,7 @@ const GivingLevels = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Choose your level of impact
+            Choose your level of impact.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Every gift matters. Major gifts create leverage, allowing IMA to scale programs and reach more physicians and patients.
@@ -73,7 +73,7 @@ const GivingLevels = () => {
         </div>
         <div className="max-w-2xl mx-auto bg-card p-8 rounded-lg shadow-lg">
           <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Make your major gift today
+            Make your major gift today.
           </h3>
           <div className="space-y-4">
             <p className="text-center text-muted-foreground">

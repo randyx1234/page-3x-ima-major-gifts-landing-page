@@ -33,7 +33,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
         <div className="max-w-5xl mx-auto space-y-8">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-white">
-            Fuel the mission to make America healthy again
+            Fuel the mission to make America healthy again.
           </h1>
           <p className="text-2xl md:text-3xl text-white/90 max-w-4xl mx-auto leading-relaxed">
             Defend medical freedom, fund honest research, and restore evidence-based, patient-first care.
