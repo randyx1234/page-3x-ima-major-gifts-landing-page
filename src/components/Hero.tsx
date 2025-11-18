@@ -27,7 +27,7 @@ const Hero = () => {
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-primary/80" />
+      <div className="absolute inset-0 bg-primary/55" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20 text-center">
