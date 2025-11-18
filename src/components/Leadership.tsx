@@ -1,6 +1,7 @@
 import drMarik from "@/assets/dr-marik.jpg";
 import drVaron from "@/assets/dr-varon-new.jpg";
-import drKory from "@/assets/dr-kory.jpg";
+import drLindley from "@/assets/dr-lindley.jpg";
+import drBowden from "@/assets/dr-bowden.jpg";
 
 const Leadership = () => {
   const founders = [
@@ -17,10 +18,16 @@ const Leadership = () => {
       bio: "President and Chief Medical Officer"
     },
     {
-      name: "Pierre Kory MD, MPA",
-      title: "Pulmonary and Critical Care Specialist",
-      image: drKory,
-      bio: "President Emeritus, IMA • Founder, Leading Edge Clinic"
+      name: "Katarina Lindley, DO, FACOFP",
+      title: "Board-certified Family Physician",
+      image: drLindley,
+      bio: "Co-founder, President, The Global Health Project"
+    },
+    {
+      name: "Mary Talley Bowden, MD",
+      title: "Otolaryngology and Sleep Medicine",
+      image: drBowden,
+      bio: "Founder, Coalition for Health Freedom and BreatheMD"
     }
   ];
 
