@@ -18,7 +18,7 @@ const FoundersCircle = () => {
   };
 
   return (
-    <section id="founders-circle" className="py-20 bg-gradient-to-br from-primary to-primary/80">
+    <section id="founders-circle" className="py-20 bg-gradient-to-br from-[#03066d] to-[#03b4b5]">
       <div className="container mx-auto px-4">
         <Card className="max-w-4xl mx-auto bg-card/95 backdrop-blur">
           <CardContent className="p-8 md:p-12">
