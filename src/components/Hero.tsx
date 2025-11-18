@@ -43,7 +43,7 @@ const Hero = () => {
             <Button
               size="lg"
               onClick={() => scrollToSection("giving-levels")}
-              className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-full shadow-lg"
+              className="bg-accent hover:bg-accent/90 text-white font-semibold text-lg px-8 py-6 rounded-md shadow-lg"
             >
               Make a Major Gift →
             </Button>
@@ -51,7 +51,7 @@ const Hero = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("footer")}
-              className="bg-white/95 hover:bg-white text-primary border-0 font-semibold text-lg px-8 py-6 rounded-full shadow-lg"
+              className="bg-white/95 hover:bg-white text-primary border-0 font-semibold text-lg px-8 py-6 rounded-md shadow-lg"
             >
               <Play className="w-5 h-5 mr-2 fill-current" />
               Schedule a Call With Our Team
