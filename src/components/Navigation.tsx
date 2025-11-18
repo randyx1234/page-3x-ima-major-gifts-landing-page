@@ -32,38 +32,6 @@ const Navigation = () => {
             <img src={imaLogo} alt="Independent Medical Alliance" className="h-12" />
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
-            <button
-              onClick={() => scrollToSection("what-we-do")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Why IMA
-            </button>
-            <button
-              onClick={() => scrollToSection("major-gift-impact")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Programs
-            </button>
-            <button
-              onClick={() => scrollToSection("major-gift-impact")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Impact
-            </button>
-            <button
-              onClick={() => scrollToSection("founders-circle")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Founders Circle
-            </button>
-            <button
-              onClick={() => scrollToSection("footer")}
-              className="text-foreground/80 hover:text-primary transition-colors"
-            >
-              Contact
-            </button>
-          </div>
 
           <Button
             onClick={() => scrollToSection("giving-levels")}
