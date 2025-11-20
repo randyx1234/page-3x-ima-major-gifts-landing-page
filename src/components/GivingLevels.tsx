@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Phone } from "lucide-react";
 
 const GivingLevels = () => {
   const tiers = [
@@ -76,9 +77,10 @@ const GivingLevels = () => {
             Make your major gift today.
           </h3>
           <div className="space-y-4">
-            <p className="text-center text-muted-foreground">
-              To make a secure donation or discuss custom giving options, please contact our team.
-            </p>
+            <div className="text-center text-muted-foreground space-y-1">
+              <p>To make a secure donation or discuss custom giving options,</p>
+              <p>please contact our team.</p>
+            </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
@@ -86,13 +88,10 @@ const GivingLevels = () => {
               >
                 Contact Donations Team
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
-              >
-                Call (555) 123-4567
-              </Button>
+              <div className="flex items-center justify-center gap-2 text-foreground text-lg font-semibold">
+                <Phone className="w-5 h-5" />
+                <span>Call (202) 987-5660</span>
+              </div>
             </div>
           </div>
         </div>
