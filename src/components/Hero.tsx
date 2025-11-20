@@ -49,9 +49,9 @@ const Hero = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
+              variant="ghost"
               onClick={() => scrollToSection("footer")}
-              className="bg-white/95 hover:bg-white text-primary hover:text-primary border-0 font-semibold text-lg px-8 py-6 rounded-md shadow-lg"
+              className="text-white hover:bg-white/10 font-semibold text-lg px-8 py-6 rounded-md"
             >
               <Phone className="w-5 h-5 mr-2" />
               Schedule a Call With Our Team
