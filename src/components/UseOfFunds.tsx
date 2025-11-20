@@ -83,7 +83,7 @@ const UseOfFunds = () => {
             Where your gift goes.
           </h2>
           <p className="text-lg text-center text-muted-foreground mb-8">
-            IMA is committed to transparency and stewardship. Your contribution is used to advance the mission with care and integrity.
+            IMA is committed to transparency and stewardship. Your contribution is used to <br />advance the mission with care and integrity.
           </p>
           <div className="space-y-6 mb-6">
             {breakdown.map((item, index) => (
