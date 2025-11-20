@@ -38,7 +38,7 @@ const WhatWeDo = () => {
             What your support makes possible.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            IMA exists to protect patients and empower physicians who put people before profit. Major gifts directly fuel these programs.
+            Independent Medical Alliance exists to protect patients and empower physicians who put people before profit. Major gifts directly fuel these programs.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
