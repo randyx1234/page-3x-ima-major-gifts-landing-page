@@ -1,8 +1,29 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const GivingLevels = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    amount: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast({
+      title: "Thank you for your donation!",
+      description: "Our team will contact you shortly to complete your donation.",
+    });
+    setFormData({ name: "", email: "", amount: "", message: "" });
+  };
+
   const tiers = [
     {
       amount: "$1,000",
@@ -76,23 +97,73 @@ const GivingLevels = () => {
           <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
             Make your major gift today.
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-6">
             <div className="text-center text-muted-foreground space-y-1">
               <p>To make a secure donation or discuss custom giving options,</p>
               <p>please contact our team.</p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
-              >
-                Contact Donations Team
-              </Button>
-              <div className="flex items-center justify-center gap-2 text-foreground text-lg font-semibold">
-                <Phone className="w-5 h-5" />
-                <span>Call (202) 987-5660</span>
-              </div>
+            <div className="flex items-center justify-center gap-2 text-foreground text-lg font-semibold">
+              <Phone className="w-5 h-5" />
+              <span>Call (202) 987-5660</span>
             </div>
+            
+            <form onSubmit={handleSubmit} className="space-y-4 mt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Full Name *</Label>
+                  <Input
+                    id="name"
+                    type="text"
+                    required
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email *</Label>
+                  <Input
+                    id="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="amount">Donation Amount *</Label>
+                <Input
+                  id="amount"
+                  type="text"
+                  required
+                  value={formData.amount}
+                  onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
+                  placeholder="$1,000"
+                />
+              </div>
+              
+              <div className="space-y-2">
+                <Label htmlFor="message">Message (Optional)</Label>
+                <Input
+                  id="message"
+                  type="text"
+                  value={formData.message}
+                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  placeholder="Any special requests or questions"
+                />
+              </div>
+              
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+              >
+                Submit Donation Request
+              </Button>
+            </form>
           </div>
         </div>
       </div>
