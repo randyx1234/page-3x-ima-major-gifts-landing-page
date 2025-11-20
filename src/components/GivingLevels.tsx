@@ -99,8 +99,7 @@ const GivingLevels = () => {
           </h3>
           <div className="space-y-6">
             <div className="text-center text-muted-foreground space-y-1">
-              <p>To make a secure donation or discuss custom giving options,</p>
-              <p>please contact our team.</p>
+              <p>To make a secure donation or discuss custom giving options, <br />please contact our team.</p>
             </div>
             <div className="flex items-center justify-center gap-2 text-foreground text-lg font-semibold">
               <Phone className="w-5 h-5" />
