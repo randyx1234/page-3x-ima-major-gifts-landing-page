@@ -36,7 +36,7 @@ const Navigation = () => {
           <Button
             onClick={() => scrollToSection("giving-levels")}
             size="lg"
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            className="bg-[#03b4b5] hover:bg-[#03b4b5]/90 text-primary-foreground font-semibold"
           >
             Donate Now
           </Button>
