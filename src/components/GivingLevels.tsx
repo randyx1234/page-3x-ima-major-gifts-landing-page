@@ -1,27 +1,96 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+
+const US_STATES = [
+  "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", 
+  "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", 
+  "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", 
+  "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", 
+  "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", 
+  "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", 
+  "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", 
+  "Wisconsin", "Wyoming"
+];
 
 const GivingLevels = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    amount: "",
-    message: "",
+    phone: "",
+    state: "",
+    message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Thank you for your donation!",
-      description: "Our team will contact you shortly to complete your donation.",
-    });
-    setFormData({ name: "", email: "", amount: "", message: "" });
+    
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.phone || !formData.state) {
+      toast({
+        title: "Required fields missing",
+        description: "Please fill in all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    try {
+      const payload = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        emailAddress: formData.email,
+        phoneNumber: formData.phone,
+        addressState: formData.state,
+        description: formData.message
+      };
+
+      const response = await fetch("https://espocrm.theflccc.org/api/v1/LeadCapture/01c8a47a0773cb50e73bdaa59d22c646", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to submit form");
+      }
+
+      toast({
+        title: "Form submitted successfully",
+        description: "Our philanthropy team will contact you soon."
+      });
+
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        state: "",
+        message: ""
+      });
+    } catch (error) {
+      console.error("Form submission error:", error);
+      toast({
+        title: "Submission failed",
+        description: "Please try again or call us directly.",
+        variant: "destructive"
+      });
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
   };
 
   const tiers = [
@@ -93,78 +162,126 @@ const GivingLevels = () => {
             </Card>
           ))}
         </div>
-        <div className="max-w-2xl mx-auto bg-card p-8 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-            Make your major gift today.
+        <Card className="max-w-2xl mx-auto p-8 shadow-elevated">
+          <h3 className="text-3xl font-bold text-foreground mb-4 text-center">
+            Considering a Major Gift?
           </h3>
-          <div className="space-y-6">
-            <div className="text-center text-muted-foreground space-y-1">
-              <p>To make a secure donation or discuss custom giving options, <br />please contact our team.</p>
-            </div>
-            <div className="flex items-center justify-center gap-2 text-foreground text-lg font-semibold">
-              <Phone className="w-5 h-5" />
-              <span>Call (202) 987-5660</span>
+          
+          <p className="text-center text-muted-foreground mb-6">
+            Let's discuss how your gift can make a lasting impact. Call us at{" "}
+            <a href="tel:+12029875660" className="text-primary font-semibold hover:underline">
+              (202) 987-5660
+            </a>
+            {" "}or submit the form below.
+          </p>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <Label htmlFor="firstName" className="text-foreground font-semibold">
+                First Name <span className="text-destructive">*</span>
+              </Label>
+              <Input
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                required
+                className="mt-1.5"
+              />
             </div>
             
-            <form onSubmit={handleSubmit} className="space-y-4 mt-6">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Full Name *</Label>
-                  <Input
-                    id="name"
-                    type="text"
-                    required
-                    value={formData.name}
-                    onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="John Doe"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="john@example.com"
-                  />
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="amount">Donation Amount *</Label>
-                <Input
-                  id="amount"
-                  type="text"
-                  required
-                  value={formData.amount}
-                  onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                  placeholder="$1,000"
-                />
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="message">Message (Optional)</Label>
-                <Input
-                  id="message"
-                  type="text"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Any special requests or questions"
-                />
-              </div>
-              
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+            <div>
+              <Label htmlFor="lastName" className="text-foreground font-semibold">
+                Last Name <span className="text-destructive">*</span>
+              </Label>
+              <Input
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                required
+                className="mt-1.5"
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="email" className="text-foreground font-semibold">
+                Email Address <span className="text-destructive">*</span>
+              </Label>
+              <Input
+                id="email"
+                name="email"
+                type="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="mt-1.5"
+              />
+            </div>
+            
+            <div>
+              <Label htmlFor="phone" className="text-foreground font-semibold">
+                Phone Number <span className="text-destructive">*</span>
+              </Label>
+              <Input
+                id="phone"
+                name="phone"
+                type="tel"
+                value={formData.phone}
+                onChange={handleChange}
+                required
+                className="mt-1.5"
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="state" className="text-foreground font-semibold">
+                State <span className="text-destructive">*</span>
+              </Label>
+              <Select
+                value={formData.state}
+                onValueChange={(value) => setFormData({ ...formData, state: value })}
               >
-                Submit Donation Request
-              </Button>
-            </form>
-          </div>
-        </div>
+                <SelectTrigger className="mt-1.5">
+                  <SelectValue placeholder="Select your state" />
+                </SelectTrigger>
+                <SelectContent>
+                  {US_STATES.map((state) => (
+                    <SelectItem key={state} value={state}>
+                      {state}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+
+            <div>
+              <Label htmlFor="message" className="text-foreground font-semibold">
+                Message (Optional)
+              </Label>
+              <Textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Tell us about your philanthropic interests..."
+                rows={3}
+                className="mt-1.5"
+              />
+            </div>
+
+            <Button 
+              type="submit" 
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              Submit Inquiry
+            </Button>
+
+            <p className="text-center text-sm text-muted-foreground pt-2">
+              Your information is protected and will only be used to discuss major gift opportunities.
+            </p>
+          </form>
+        </Card>
       </div>
     </section>
   );
