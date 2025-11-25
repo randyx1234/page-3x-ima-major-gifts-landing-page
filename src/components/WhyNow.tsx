@@ -11,8 +11,8 @@ const WhyNow = () => {
   return <section id="why-ima-why-now" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-foreground mb-8 text-center">
-            Why IMA. Why now.
+          <h2 className="text-[48pt] font-bold text-foreground mb-8 text-center">
+            Why IMA. Why Now.
           </h2>
           <div className="space-y-6 text-lg text-muted-foreground mb-8">
             <p>

@@ -3,9 +3,9 @@ const TheStakes = () => {
     <section id="the-stakes" className="py-24 bg-gradient-to-b from-background to-section-light">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-            Medicine is broken. <br />
-            <span className="text-primary">But it can be fixed.</span>
+          <h2 className="text-[48pt] font-bold text-foreground leading-tight">
+            Medicine Is Broken. <br />
+            <span className="text-primary">But It Can Be Fixed.</span>
           </h2>
           
           <div className="max-w-2xl mx-auto space-y-6 text-lg text-muted-foreground">

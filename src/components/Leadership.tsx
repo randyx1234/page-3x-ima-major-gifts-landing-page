@@ -35,8 +35,8 @@ const Leadership = () => {
     <section id="credibility" className="py-20 bg-section-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Led by physicians America can trust.
+          <h2 className="text-[48pt] font-bold text-foreground mb-4">
+            Led By Physicians America Can Trust.
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Founded by physicians committed to patient-first, evidence-based care
