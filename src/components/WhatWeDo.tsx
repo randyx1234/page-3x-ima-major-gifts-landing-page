@@ -34,7 +34,7 @@ const WhatWeDo = () => {
     <section id="what-we-do" className="py-20 bg-section-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-[48pt] font-bold text-foreground mb-4">
+          <h2 className="text-[48px] font-bold text-foreground mb-4">
             What Your Support Makes Possible.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
