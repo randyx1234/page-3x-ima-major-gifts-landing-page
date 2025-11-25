@@ -23,8 +23,8 @@ const FoundersCircle = () => {
         <Card className="max-w-4xl mx-auto bg-card/95 backdrop-blur">
           <CardContent className="p-8 md:p-12">
             <div className="text-center mb-8">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Join the Founders Circle.
+              <h2 className="text-[48pt] font-bold text-foreground mb-4">
+                Join The Founders Circle.
               </h2>
               <p className="text-xl text-muted-foreground">
                 A dedicated community of major donors building the future of honest medicine.

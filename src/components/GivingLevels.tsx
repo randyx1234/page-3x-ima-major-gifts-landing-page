@@ -126,8 +126,8 @@ const GivingLevels = () => {
     <section id="giving-levels" className="py-20 bg-section-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-foreground mb-4">
-            Choose your level of impact.
+          <h2 className="text-[48pt] font-bold text-foreground mb-4">
+            Choose Your Level Of Impact.
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Every gift matters. Major gifts create leverage, allowing IMA to scale programs and reach more physicians and patients.
@@ -163,8 +163,8 @@ const GivingLevels = () => {
           ))}
         </div>
         <Card className="max-w-2xl mx-auto p-8 shadow-elevated">
-          <h3 className="text-3xl font-bold text-foreground mb-4 text-center">
-            Considering a Major Gift?
+          <h3 className="text-[48pt] font-bold text-foreground mb-4 text-center">
+            Considering A Major Gift?
           </h3>
           
           <p className="text-center text-muted-foreground mb-6">
