@@ -1,6 +1,6 @@
 const TheStakes = () => {
   return (
-    <section id="the-stakes" className="py-24 bg-gradient-to-b from-background to-section-light">
+    <section id="the-stakes" className="py-24" style={{ backgroundColor: '#f3f5f7' }}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-[48px] font-bold text-foreground leading-tight">
