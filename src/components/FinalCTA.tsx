@@ -12,7 +12,7 @@ const FinalCTA = () => {
     <section id="final-cta" className="py-20 bg-gradient-to-br from-[#03066d] to-[#03b4b5]">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-8">
-          <h2 className="text-[48px] font-bold text-primary-foreground">
+          <h2 className="text-[48px] font-bold text-primary-foreground leading-[1.1]">
             Be Part Of The Movement To <br />Restore Honest Medicine.
           </h2>
           <p className="text-xl text-primary-foreground/90">
