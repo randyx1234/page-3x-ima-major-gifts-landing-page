@@ -7,27 +7,27 @@ const Leadership = () => {
   const founders = [
     {
       name: "Paul E. Marik MD, FCCM, FCCP",
-      title: "Pulmonary and Critical Care Specialist",
+      title: "",
       image: drMarik,
-      bio: "Chief Scientific Officer"
+      bio: "IMA Co-Founder, Chief Scientific Officer"
     },
     {
       name: "Joseph Varon MD, FCCM, FCCP",
-      title: "Professor of Medicine",
+      title: "",
       image: drVaron,
-      bio: "President and Chief Medical Officer"
+      bio: "IMA Co-Founder, Chief Medical Officer"
     },
     {
       name: "Katarina Lindley, DO, FACOFP",
-      title: "Board-certified Family Physician",
+      title: "",
       image: drLindley,
-      bio: "Co-founder, President, The Global Health Project"
+      bio: "IMA Senior Fellow, Family Medicine & Director Fellowship Program"
     },
     {
       name: "Ryan Cole, MD",
-      title: "Board-certified Dermatopathologist",
+      title: "",
       image: drCole,
-      bio: "Founder, Cole Diagnostics"
+      bio: "IMA Senior Fellow, Pathology"
     }
   ];
 
@@ -55,9 +55,8 @@ const Leadership = () => {
               </div>
               <div className="p-6 space-y-3">
                 <h3 className="text-2xl font-bold text-foreground">{founder.name}</h3>
-                <p className="text-accent font-semibold">{founder.title}</p>
-                <p className="text-muted-foreground italic leading-relaxed">
-                  "{founder.bio}"
+                <p className="text-accent font-normal leading-relaxed">
+                  {founder.bio}
                 </p>
               </div>
             </div>
