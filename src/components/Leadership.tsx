@@ -1,7 +1,7 @@
-import drMarik from "@/assets/dr-marik.jpg";
+import drMarik from "@/assets/dr-marik-new.jpg";
 import drVaron from "@/assets/dr-varon-new.jpg";
-import drLindley from "@/assets/dr-lindley.jpg";
-import drBowden from "@/assets/dr-bowden.jpg";
+import drLindley from "@/assets/dr-lindley-new.jpg";
+import drCole from "@/assets/dr-cole-new.jpg";
 
 const Leadership = () => {
   const founders = [
@@ -24,10 +24,10 @@ const Leadership = () => {
       bio: "Co-founder, President, The Global Health Project"
     },
     {
-      name: "Mary Talley Bowden, MD",
-      title: "Otolaryngology and Sleep Medicine",
-      image: drBowden,
-      bio: "Founder, Coalition for Health Freedom and BreatheMD"
+      name: "Ryan Cole, MD",
+      title: "Board-certified Dermatopathologist",
+      image: drCole,
+      bio: "Founder, Cole Diagnostics"
     }
   ];
 
