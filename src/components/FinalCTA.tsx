@@ -30,7 +30,7 @@ const FinalCTA = () => {
               size="lg"
               variant="outline"
               onClick={() => scrollToSection("footer")}
-              className="border-2 border-primary-foreground text-blue-900 hover:bg-primary-foreground hover:text-primary font-semibold text-lg px-8"
+              className="border-2 border-primary-foreground text-blue-900 hover:bg-primary-foreground hover:text-accent font-semibold text-lg px-8"
             >
               Talk with our team
             </Button>

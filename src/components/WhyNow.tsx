@@ -35,8 +35,8 @@ const WhyNow = () => {
           <div className="my-12">
             <div className="aspect-video w-full max-w-3xl mx-auto rounded-lg overflow-hidden bg-muted border-2 border-border flex items-center justify-center">
               <div className="text-center space-y-4 p-8">
-                <div className="w-20 h-20 mx-auto bg-primary/20 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-20 h-20 mx-auto bg-accent/20 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-accent" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
@@ -47,7 +47,7 @@ const WhyNow = () => {
           </div>
 
           <div className="text-center">
-            <Button size="lg" onClick={() => scrollToSection("giving-levels")} className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold">
+            <Button size="lg" onClick={() => scrollToSection("giving-levels")} className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold">
               Stand with IMA today
             </Button>
           </div>

@@ -51,7 +51,7 @@ const FoundersCircle = () => {
               <Button
                 size="lg"
                 onClick={() => scrollToSection("footer")}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
+                className="bg-accent hover:bg-accent/90 text-primary-foreground font-semibold"
               >
                 Inquire about Founders Circle
               </Button>
@@ -59,7 +59,7 @@ const FoundersCircle = () => {
                 size="lg"
                 variant="outline"
                 onClick={() => scrollToSection("footer")}
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+                className="border-2 border-accent text-accent hover:bg-accent hover:text-primary-foreground font-semibold"
               >
                 Schedule a confidential conversation
               </Button>
