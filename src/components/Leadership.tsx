@@ -55,7 +55,7 @@ const Leadership = () => {
               </div>
               <div className="p-6 space-y-3">
                 <h3 className="text-2xl font-bold text-foreground">{founder.name}</h3>
-                <p className="text-accent font-normal leading-relaxed">
+                <p className="text-black font-normal leading-relaxed">
                   {founder.bio}
                 </p>
               </div>
